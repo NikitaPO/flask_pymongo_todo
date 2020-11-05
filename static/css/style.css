@@ -1,0 +1,13 @@
+body {
+  font-family: "Indie Flower", cursive;
+}
+
+a {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+.finished_task {
+  text-decoration: line-through;
+  color: #a1a1a1 !important;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      text="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h1>Список заданий:</h1>
+    <form action="/add" method="POST">
+      <input type="text" name="message" value="" required /><button
+        type="submit"
+      >
+        Добавить в список
+      </button>
+    </form>
+
+    <a href="/delete">Удалить все из списка</a>
+
+    <h3>Не завершенные задания:</h3>
+    <ol>
+      {% for item in unfinished %}
+      <li>
+        <a href="/complete/{{item._id}}">{{item.message}}</a>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <h3>Завершенные задания:</h3>
+    <ol>
+      {% for item in finished %}
+      <li>
+        <span class="finished_task">{{item.message}}</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </body>
+</html>
