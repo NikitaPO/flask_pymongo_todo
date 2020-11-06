@@ -1,4 +1,4 @@
-# flask_pymongo_todo
+# Flask TODO app
 
 Simple TODO application on flask and pymongo
 
