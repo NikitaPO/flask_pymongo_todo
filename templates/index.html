@@ -34,12 +34,27 @@
           {% for item in unfinished %}
           <li>
             <div class="unfinished_task">
+              <div class="checkmark_container">
+                <svg
+                  class="checkmark"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z"
+                    stroke="#3da35a"
+                    fill="transparent"
+                  />
+                </svg>
+              </div>
               <span class="checkbox"></span>
-              <a href="/complete/{{item._id}}">{{item.message}}</a>
+              <a class="unfinished_task_link" href="/complete/{{item._id}}"
+                >{{item.message}}</a
+              >
             </div>
           </li>
           {% endfor %}
-      
+        </ul>
 
         <ul class="finished_tasks">
           {% for item in finished %}
@@ -54,6 +69,10 @@
         </div>
       </div>
       <footer></footer>
+      <script
+        src="{{url_for('static', filename='js/index.js')}}"
+        defer
+      ></script>
     </div>
   </body>
 </html>

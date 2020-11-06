@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link text="text/css" href="/static/css/style.css" rel="stylesheet" />
+    <title>TODO list</title>
+  </head>
+  <body>
+    <div class="container_box">
+      <div class="container">
+        <h1>Список заданий</h1>
+        <form class="form" action="/add" method="POST">
+          <div class="form_box">
+            <input
+              class="task_input"
+              type="text"
+              name="message"
+              value=""
+              required
+            /><button class="add_btn" type="submit">+</button>
+          </div>
+        </form>
+
+        <ul class="unfinished_tasks">
+          <li>
+            <div class="unfinished_task">
+              <div class="checkmark_container">
+                <svg
+                  class="checkmark"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z"
+                    stroke="#3da35a"
+                    fill="transparent"
+                  />
+                </svg>
+              </div>
+              <span class="checkbox"></span>
+              <a
+                class="unfinished_task_link"
+                href="/complete/5fa42c16fef74083f38932b1"
+                >Сделать доклад</a
+              >
+            </div>
+          </li>
+
+          <li>
+            <div class="unfinished_task">
+              <div class="checkmark_container">
+                <svg
+                  class="checkmark"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z"
+                    stroke="#3da35a"
+                    fill="transparent"
+                  />
+                </svg>
+              </div>
+              <span class="checkbox"></span>
+              <a
+                class="unfinished_task_link"
+                href="/complete/5fa42c16fef74083f38932b2"
+                >Отрепетировать</a
+              >
+            </div>
+          </li>
+
+          <li>
+            <div class="unfinished_task">
+              <div class="checkmark_container">
+                <svg
+                  class="checkmark"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z"
+                    stroke="#3da35a"
+                    fill="transparent"
+                  />
+                </svg>
+              </div>
+              <span class="checkbox"></span>
+              <a
+                class="unfinished_task_link"
+                href="/complete/5fa42c2ffef74083f38932b4"
+                >Прочитать книгу</a
+              >
+            </div>
+          </li>
+
+          <li>
+            <div class="unfinished_task">
+              <div class="checkmark_container">
+                <svg
+                  class="checkmark"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z"
+                    stroke="#3da35a"
+                    fill="transparent"
+                  />
+                </svg>
+              </div>
+              <span class="checkbox"></span>
+              <a
+                class="unfinished_task_link"
+                href="/complete/5fa43a16aa0342fcc2bd3006"
+                >Устроить пати</a
+              >
+            </div>
+          </li>
+
+          <li>
+            <div class="unfinished_task">
+              <div class="checkmark_container">
+                <svg
+                  class="checkmark"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z"
+                    stroke="#3da35a"
+                    fill="transparent"
+                  />
+                </svg>
+              </div>
+              <span class="checkbox"></span>
+              <a
+                class="unfinished_task_link"
+                href="/complete/5fa49b2b6532b00de633ef2a"
+                >Заключить сделку с дьяволом</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <ul class="finished_tasks">
+          <li>
+            <span class="finished_task">Подготовить презентацию</span>
+          </li>
+
+          <li>
+            <span class="finished_task">Выпить чаю</span>
+          </li>
+
+          <li>
+            <span class="finished_task">Построить ракету</span>
+          </li>
+
+          <li>
+            <span class="finished_task">Освоить космос</span>
+          </li>
+
+          <li>
+            <span class="finished_task">adsf</span>
+          </li>
+
+          <li>
+            <span class="finished_task">Убить время</span>
+          </li>
+
+          <li>
+            <span class="finished_task">Разработать коронавирус</span>
+          </li>
+        </ul>
+
+        <div class="delete_btn__box">
+          <a href="/delete" class="delete_btn">Очистить список</a>
+        </div>
+      </div>
+      <footer></footer>
+      <script src="../scripts/index.js" defer></script>
+    </div>
+  </body>
+</html>

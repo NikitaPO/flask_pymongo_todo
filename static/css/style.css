@@ -84,9 +84,68 @@ ul {
   margin-top: 10px;
 }
 
-.unfinished_task:hover {
+.unfinished_task.hover {
   border-bottom: 2px solid #0c0e0c;
   transition: 1s;
+}
+
+/* checkmark animation */
+
+.checkmark_container {
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  width: 30px;
+  height: 75px;
+  z-index: 10;
+}
+
+.checkmark path {
+  stroke-dasharray: 99.47578430175781;
+  stroke-dashoffset: -99.47578430175781;
+  fill: transparent;
+}
+
+.checkmark.animate path {
+  animation: 0.7s ease forwards draw;
+  opacity: 1;
+}
+
+@keyframes draw {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: -99.47578430175781;
+    fill: transparent;
+  }
+
+  35% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+
+  60% {
+    fill: #3da35a;
+    opacity: 1;
+  }
+
+  100% {
+    fill: #3da35a;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* ------------ */
+
+.unfinished_tasks a {
+  color: #2f332e;
+  text-decoration: none;
+}
+
+.unfinished_tasks a:hover {
+  color: #0f160e;
+  padding-left: 5px;
+  transition: 0.3s;
 }
 
 .checkbox {
@@ -99,22 +158,11 @@ ul {
   left: 0px;
 }
 
-.unfinished_task:hover .checkbox {
+.unfinished_task.hover .checkbox {
   border-radius: 50%;
   border: 2px solid #2e2d2d;
   height: 15px;
   width: 15px;
-  transition: 0.3s;
-}
-
-.unfinished_task a {
-  color: #2f332e;
-  text-decoration: none;
-}
-
-.unfinished_task a:hover {
-  color: #0f160e;
-  padding-left: 5px;
   transition: 0.3s;
 }
 
@@ -132,7 +180,7 @@ ul {
   text-decoration: none;
   border: 1px solid rgb(247, 142, 142);
   border-radius: 15px;
-  padding: 5px 10px;
+  padding: 5px 15px;
   color: rgb(172, 78, 78);
   background-color: rgb(250, 145, 145);
 }
@@ -142,6 +190,7 @@ ul {
 }
 
 .delete_btn:hover {
+  padding: 5px 15px;
   background-color: rgb(252, 196, 196);
   transition: 0.3s;
 }

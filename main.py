@@ -17,11 +17,17 @@ initial_tasks = [
     {"message": "Подготовить презентацию", "completed": True},
     {"message": "Сделать доклад", "completed": False},
     {"message": "Отрепетировать", "completed": False},
-    {"message": "Выпить чаю", "completed": False}
+    {"message": "Выпить чаю", "completed": False},
+    {"message": "Прочитать книгу", "completed": False},
+    {"message": "Разработать коронавирус", "completed": True},
+    {"message": "Построить ракету", "completed": True},
+    {"message": "Заключить сделку с дьяволом", "completed": False},
+    {"message": "Освоить космос", "completed": True},
+    {"message": "Убить время", "completed": True},
 ]
 
 # раскомментировать чтоб добавить заданий
-# tasks.insert_many(initial_tasks)
+tasks.insert_many(initial_tasks)
 
 unfinished_tasks = []
 finished_tasks = []
