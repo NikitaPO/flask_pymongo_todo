@@ -27,7 +27,7 @@ initial_tasks = [
 ]
 
 # раскомментировать чтоб добавить заданий
-tasks.insert_many(initial_tasks)
+# tasks.insert_many(initial_tasks)
 
 unfinished_tasks = []
 finished_tasks = []
