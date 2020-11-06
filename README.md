@@ -1,6 +1,6 @@
 # Flask TODO app
 
-Simple TODO application on flask and pymongo
+Simple TODO application in flask and pymongo
 
 [https://flask-pymongo-todo.herokuapp.com/](https://flask-pymongo-todo.herokuapp.com/)
 
