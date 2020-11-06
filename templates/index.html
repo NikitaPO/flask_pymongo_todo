@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
     <link
@@ -15,33 +15,45 @@
     <title>{{title}}</title>
   </head>
   <body>
-    <h1>Список заданий:</h1>
-    <form action="/add" method="POST">
-      <input type="text" name="message" value="" required /><button
-        type="submit"
-      >
-        Добавить в список
-      </button>
-    </form>
+    <div class="container_box">
+      <div class="container">
+        <h1>Список заданий</h1>
+        <form class="form" action="/add" method="POST">
+          <div class="form_box">
+            <input
+              class="task_input"
+              type="text"
+              name="message"
+              value=""
+              required
+            /><button class="add_btn" type="submit">+</button>
+          </div>
+        </form>
 
-    <a href="/delete">Удалить все из списка</a>
+        <ul class="unfinished_tasks">
+          {% for item in unfinished %}
+          <li>
+            <div class="unfinished_task">
+              <span class="checkbox"></span>
+              <a href="/complete/{{item._id}}">{{item.message}}</a>
+            </div>
+          </li>
+          {% endfor %}
+      
 
-    <h3>Незавершенные задания:</h3>
-    <ol>
-      {% for item in unfinished %}
-      <li>
-        <a href="/complete/{{item._id}}">{{item.message}}</a>
-      </li>
-      {% endfor %}
-    </ol>
+        <ul class="finished_tasks">
+          {% for item in finished %}
+          <li>
+            <span class="finished_task">{{item.message}}</span>
+          </li>
+          {% endfor %}
+        </ul>
 
-    <h3>Завершенные задания:</h3>
-    <ol>
-      {% for item in finished %}
-      <li>
-        <span class="finished_task">{{item.message}}</span>
-      </li>
-      {% endfor %}
-    </ol>
+        <div class="delete_btn__box">
+          <a href="/delete" class="delete_btn">Очистить список</a>
+        </div>
+      </div>
+      <footer></footer>
+    </div>
   </body>
 </html>
