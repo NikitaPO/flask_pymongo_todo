@@ -202,9 +202,9 @@ footer {
   height: 60px;
 }
 
-@media screen and (max-width: 600px) {
+@media handheld and (max-width: 600px) {
   .add_btn {
     right: 1px;
-    top: -5px;
+    top: -4px;
   }
 }
