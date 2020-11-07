@@ -27,8 +27,8 @@ h1 {
   width: 25px;
   cursor: pointer;
   font-size: 21px;
-  right: 0px;
-  top: 0px;
+  right: 1px;
+  top: 1px;
 }
 
 .add_btn:hover {
@@ -200,4 +200,11 @@ footer {
   background-image: url("../houses.jpg");
   width: 100%;
   height: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .add_btn {
+    right: 1px;
+    top: -5px;
+  }
 }
