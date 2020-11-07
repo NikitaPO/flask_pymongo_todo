@@ -25,10 +25,10 @@ h1 {
   line-height: 0px;
   height: 25px;
   width: 25px;
-  top: 1px;
-  right: 1px;
   cursor: pointer;
   font-size: 21px;
+  right: 0.03em;
+  top: 0.04em;
 }
 
 .add_btn:hover {
