@@ -27,8 +27,8 @@ h1 {
   width: 25px;
   cursor: pointer;
   font-size: 21px;
-  right: 0.03em;
-  top: 0.04em;
+  right: 0px;
+  top: 0px;
 }
 
 .add_btn:hover {
